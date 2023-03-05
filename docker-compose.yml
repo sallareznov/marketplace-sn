@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: marketplace
+    environment:
+      POSTGRES_USER: marketplace
+      POSTGRES_PASSWORD: marketplace
+      POSTGRES_DB: marketplace
+    ports:
+      - "5432:5432"
+
+
+volumes:
+  nbafldb:
+    driver: local
